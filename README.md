@@ -25,3 +25,20 @@ yo angular
 grunt serve
 
 http://localhost
+
+
+
+02. Register in Front End Views | 06-Generated Angular Project  
+
+Nothing  
+
+02. Register in Front End Views |  07-Register View
+
+yo angular:view register  
+
+
+02. Register in Front End Views |  08-ui-router
+
+
+http://localhost/#/  
+http://localhost/#/register
