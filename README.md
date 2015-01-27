@@ -51,3 +51,7 @@ Theme: SuperHero
 
 
 http://bootsnipp.com/snippets/featured/login-screen-with-background
+
+
+
+02. Register in Front End Views |  10-ui-sref active
