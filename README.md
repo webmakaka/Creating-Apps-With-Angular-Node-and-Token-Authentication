@@ -39,6 +39,15 @@ yo angular:view register
 
 02. Register in Front End Views |  08-ui-router
 
-
 http://localhost/#/  
 http://localhost/#/register
+
+
+02. Register in Front End Views |  09-App Theme
+
+http://bootswatch.com/
+
+Theme: SuperHero
+
+
+http://bootsnipp.com/snippets/featured/login-screen-with-background
