@@ -9,10 +9,11 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(fu
         url: '/',
         templateUrl: '/views/main.html'
     })
- 
+
 
     .state('register', {
         url: '/register',
-        templateUrl: '/views/register.html'
+        templateUrl: '/views/register.html',
+        controller: 'RegisterCtrl'
     });
 })
