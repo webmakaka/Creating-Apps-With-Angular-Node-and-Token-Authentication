@@ -116,3 +116,12 @@ body {
     border-bottom-style: solid;
     border-left-style: solid;
 }
+
+.main-alert{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.alert-hidden{
+    vasibilit: hidden;
+}

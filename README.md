@@ -80,3 +80,14 @@ yo angular:controller register
 03. Register Front End Controllers and Services | 16-HTTP Post
 
 Nothing
+
+
+03. Register Front End Controllers and Services | 16-HTTP Post
+
+bower install animate.css --save  
+yo angular:service alert
+
+
+03. Register Front End Controllers and Services | 17-Alert Service
+
+Неудачная попытка регистрации в системе.
