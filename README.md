@@ -4,7 +4,7 @@
 
 
 
-# 02. Register in Front End Views  
+### 02. Register in Front End Views  
 
 02. Register in Front End Views | 05-Environment Setup  
 
@@ -39,6 +39,8 @@ yo angular:view register
 
 02. Register in Front End Views |  08-ui-router
 
+bower install angular-ui-router --save
+
 http://localhost/#/  
 http://localhost/#/register
 
@@ -58,3 +60,11 @@ http://bootsnipp.com/snippets/featured/login-screen-with-background
 
 
 02. Register in Front End Views |  11-Register View Fixes
+
+
+
+### 03. Register Front End Controllers and Services
+
+03. Register Front End Controllers and Services | 14-Match Password Directive  
+
+yo angular:directive sameAs  
