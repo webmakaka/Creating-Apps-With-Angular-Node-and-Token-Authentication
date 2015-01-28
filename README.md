@@ -91,3 +91,23 @@ yo angular:service alert
 03. Register Front End Controllers and Services | 17-Alert Service
 
 Неудачная попытка регистрации в системе.
+
+
+
+### 04. Register WebAPI Manual JWT
+
+04. Register WebAPI Manual JWT | 20-API Environment Setup  
+  
+mkdir frontend  
+mkdir api  
+
+Все кроме git в /frontend  
+cd api/  
+
+npm init  
+npm install --save express
+
+node api.js
+
+С помощью PostMan делаю POST запрос localhost/register
+получаю ответ.
