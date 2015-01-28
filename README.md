@@ -68,10 +68,15 @@ http://bootsnipp.com/snippets/featured/login-screen-with-background
 03. Register Front End Controllers and Services | 14-Match Password Directive  
 
 yo angular:directive validateEquals  
-  
+
 
 03. Register Front End Controllers and Services | 15-Register Controller  
 
 yo angular:controller register  
 
 По нажатию на Submit, в консоль пишется "test"  
+
+
+03. Register Front End Controllers and Services | 16-HTTP Post
+
+Nothing
