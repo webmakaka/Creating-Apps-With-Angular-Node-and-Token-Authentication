@@ -22,17 +22,25 @@ app.post('/register', function(req, res){
     var newUser = new User.model({
         email: user.email,
         password: user.password
-    })
+    });
+
+    var payload = {
+        iss: req.hostname,
+        sub: user._id
+    }
+
+    var token = jwt.encode(payload, "shhh..");
 
     newUser.save(function(err){
-        res.status(200).send(newUser.toJSON());
+        res.status(200).send({
+            user: newUser.toJSON(),
+            token: token
+        });
     })
 })
 
 mongoose.connect('mongodb://marley:marley@ds053678.mongolab.com:53678/psjwt')
 
-console.log(jwt.encode('h1', 'secret'));
-
-// var server = app.listen(3000, function(){
-//     console.log('api listening on ', server.address().port);
-// })
+var server = app.listen(3000, function(){
+    console.log('api listening on ', server.address().port);
+})

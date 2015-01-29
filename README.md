@@ -146,3 +146,6 @@ npm install --save crypto
 
 node api.js
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.ImgxIg==.WkzcmKyO2ZLVkHGnH2fzuv2eVuRqadfCYqfuEMC5IJo=
+
+
+04. Register WebAPI Manual JWT | 26-Token Passed With Register  
