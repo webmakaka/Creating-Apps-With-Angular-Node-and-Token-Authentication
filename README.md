@@ -139,4 +139,10 @@ npm install --save bcrypt-nodejs
 04. Register WebAPI Manual JWT | 24-Hide Password  
 
 
-  
+04. Register WebAPI Manual JWT | 25-JWT Encoding From Scratch  
+
+cd api/  
+npm install --save crypto  
+
+node api.js
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.ImgxIg==.WkzcmKyO2ZLVkHGnH2fzuv2eVuRqadfCYqfuEMC5IJo=
