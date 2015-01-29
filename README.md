@@ -97,7 +97,7 @@ yo angular:service alert
 ### 04. Register WebAPI Manual JWT
 
 04. Register WebAPI Manual JWT | 20-API Environment Setup  
-  
+
 mkdir frontend  
 mkdir api  
 
@@ -111,3 +111,11 @@ node api.js
 
 С помощью PostMan делаю POST запрос localhost/register
 получаю ответ.
+
+
+04. Register WebAPI Manual JWT | 21-API Register Post  
+
+cd api/  
+npm install --save body-parser  
+
+node api.js
