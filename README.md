@@ -134,3 +134,9 @@ node api.js
 
 cd api/  
 npm install --save bcrypt-nodejs  
+
+
+04. Register WebAPI Manual JWT | 24-Hide Password  
+
+
+  
