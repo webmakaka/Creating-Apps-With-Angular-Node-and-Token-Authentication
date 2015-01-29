@@ -155,3 +155,8 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.ImgxIg==.WkzcmKyO2ZLVkHGnH2fzuv2eVuRqadfCYq
 
 cd frontend/
 yo angular:factory authToken
+
+04. Register WebAPI Manual JWT | 28-isauthenticated | something not working
+
+cd frontend/
+yo angular:controller header
