@@ -119,3 +119,18 @@ cd api/
 npm install --save body-parser  
 
 node api.js
+
+
+04. Register WebAPI Manual JWT | 22-MongoDB Save User
+
+
+cd api/  
+npm install --save mongoose  
+
+node api.js
+
+
+04. Register WebAPI Manual JWT | 23-Encrypt Password With Hash
+
+cd api/  
+npm install --save bcrypt-nodejs  

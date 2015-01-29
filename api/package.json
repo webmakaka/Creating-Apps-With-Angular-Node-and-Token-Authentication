@@ -9,7 +9,9 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.10.2",
     "express": "~4.11.1",
-    "body-parser": "~1.10.2"
+    "mongoose": "^3.8.22"
   }
 }
