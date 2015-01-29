@@ -149,3 +149,9 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.ImgxIg==.WkzcmKyO2ZLVkHGnH2fzuv2eVuRqadfCYq
 
 
 04. Register WebAPI Manual JWT | 26-Token Passed With Register  
+
+
+04. Register WebAPI Manual JWT | 27-Authtoken Factory  
+
+cd frontend/
+yo angular:factory authToken
