@@ -10,10 +10,15 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(fu
         templateUrl: '/views/main.html'
     })
 
-
     .state('register', {
         url: '/register',
         templateUrl: '/views/register.html',
         controller: 'RegisterCtrl'
+    })
+
+    .state('logout', {
+        url: '/logout',
+        controller: 'LogoutCtrl'
     });
+
 })

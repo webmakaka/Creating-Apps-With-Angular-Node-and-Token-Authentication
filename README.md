@@ -158,5 +158,14 @@ yo angular:factory authToken
 
 04. Register WebAPI Manual JWT | 28-isauthenticated | something not working
 
-cd frontend/
+cd frontend/  
 yo angular:controller header
+
+
+
+### 05. Register WebAPI JWT Library
+
+05. Register WebAPI JWT Library | 31-Logout
+
+cd frontend/  
+yo angular:controller logout  
