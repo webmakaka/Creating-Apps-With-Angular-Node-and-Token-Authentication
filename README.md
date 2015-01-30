@@ -193,3 +193,8 @@ Nothing
 05. Register WebAPI JWT Library | 35-Auth Interceptor
 
 yo angular:factory authInterceptor
+
+
+05. Register WebAPI JWT Library | 36-JWT Decoding From Scratch
+
+Nothing
