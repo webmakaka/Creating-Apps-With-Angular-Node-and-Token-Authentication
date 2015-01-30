@@ -14,6 +14,16 @@ exports.encode = function(payload, secret){
 }
 
 exports.decode = function(token, secret){
+
+    console.log("----------- jwt.js --------------");
+    console.log("token: " + token);
+    console.log("---------------------------");
+
+
+    console.log("----------- jwt.js --------------");
+    console.log("secret: " + secret);
+    console.log("---------------------------");
+
     var segments = token.split('.');
 
     if(segments.length !== 3){
@@ -23,9 +33,19 @@ exports.decode = function(token, secret){
     var header = JSON.parse(base64Decode(segments[0]));
     var payload = JSON.parse(base64Decode(segments[1]));
 
-    return payload;
+    var rawSignature = segments[0] + '.' + segments[1];
 
+    if (!verify(rawSignature, secret, segments[2])){
+        throw new Error("Verification failed");
+    }
+
+    return payload;
 }
+
+function verify(raw, secret, signature){
+    return signature === sign(raw, secret);
+}
+
 
 function sign(str, key){
     return crypto.createHmac('sha256', key).update(str).digest('base64');

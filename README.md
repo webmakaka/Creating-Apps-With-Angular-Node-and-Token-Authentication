@@ -198,3 +198,6 @@ yo angular:factory authInterceptor
 05. Register WebAPI JWT Library | 36-JWT Decoding From Scratch
 
 Nothing
+
+
+05. Register WebAPI JWT Library | 37-Verifying the Signature
