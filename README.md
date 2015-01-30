@@ -206,3 +206,9 @@ Nothing
 05. Register WebAPI JWT Library | 38-Design Break Optimize Alerts
 
 Nothing
+
+
+05. Register WebAPI JWT Library | 39-Switching to Node JWT Simple
+
+cd api/
+npm install --save jwt-simple  

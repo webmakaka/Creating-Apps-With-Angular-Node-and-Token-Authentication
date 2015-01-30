@@ -2,7 +2,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var User = require('./models/User.js')
-var jwt = require('./services/jwt.js');
+// var jwt = require('./services/jwt.js');
+var jwt = require('./services/jwt-simple.js');
 
 var app = express();
 
@@ -53,29 +54,11 @@ app.get('/jobs', function(req,res){
     }
 
     var token = req.headers.authorization.split(' ')[1];
-
-    // var token = req.headers.authorization;
-
-    console.log("-----------api.js --------------");
-    console.log("token: " + token);
-    console.log("---------------------------");
-
     var payload = jwt.decode(token, "shhh..");
-
-    console.log("-----------api.js --------------");
-    console.log("payload.sub: " + payload.sub);
-    console.log("---------------------------");
-
 
     if(payload.sub){
         res.status(401).send({message: 'Authentication failed'});
     }
-
-
-    console.log("-----------api.js --------------");
-    console.log("jobs: " + jobs);
-    console.log("---------------------------");
-
 
     res.json(jobs);
 })

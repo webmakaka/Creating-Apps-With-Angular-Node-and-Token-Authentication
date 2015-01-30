@@ -13,6 +13,7 @@
     "body-parser": "~1.10.2",
     "crypto": "0.0.3",
     "express": "~4.11.1",
+    "jwt-simple": "^0.2.0",
     "mongoose": "^3.8.22"
   }
 }
