@@ -176,9 +176,14 @@ yo angular:controller logout
 
 cd frontend/  
 yo angular:controller jobs
-  
+
 
 05. Register WebAPI JWT Library | 33-View Animations  
 
 cd frontend/
 bower install --save angular-animate
+
+
+05. Register WebAPI JWT Library | 34-Securing the Jobs Resource
+
+Nothing

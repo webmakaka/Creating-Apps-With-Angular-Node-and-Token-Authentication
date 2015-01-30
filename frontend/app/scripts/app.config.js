@@ -29,3 +29,5 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(fu
 
 
 })
+
+.constant('API_URL', 'http://localhost:3000/')

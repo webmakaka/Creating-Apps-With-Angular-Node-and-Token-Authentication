@@ -39,6 +39,20 @@ app.post('/register', function(req, res){
     })
 })
 
+var jobs = [
+    'Cook',
+    'SuperHero',
+    'Unicorn Wisperer',
+    'Toast Inspector'
+];
+
+app.get('/jobs', function(req,res){
+    if(!req.headers.authorization){
+        return res.status(401).send({message: 'You are not authorized'});
+    }
+    res.json(jobs);
+})
+
 mongoose.connect('mongodb://marley:marley@ds053678.mongolab.com:53678/psjwt')
 
 var server = app.listen(3000, function(){
