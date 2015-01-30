@@ -1,4 +1,4 @@
-angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(function($urlRouterProvider, $stateProvider){
+angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(function($urlRouterProvider, $stateProvider, $httpProvider){
 
     $urlRouterProvider.otherwise('/');
 
@@ -26,7 +26,7 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(fu
         controller: 'LogoutCtrl'
     });
 
-
+    $httpProvider.interceptors.push('authInterceptor');
 
 })
 

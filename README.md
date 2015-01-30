@@ -10,6 +10,8 @@
 
 yum install -y libpng-devel  
 
+
+npm install -g nodemon  
 npm install -g yo  
 npm install -g bower  
 npm install -g grunt-cli  
@@ -107,7 +109,7 @@ cd api/
 npm init  
 npm install --save express
 
-node api.js
+nodemon api.js
 
 С помощью PostMan делаю POST запрос localhost/register
 получаю ответ.
@@ -118,7 +120,7 @@ node api.js
 cd api/  
 npm install --save body-parser  
 
-node api.js
+nodemon api.js
 
 
 04. Register WebAPI Manual JWT | 22-MongoDB Save User
@@ -127,7 +129,7 @@ node api.js
 cd api/  
 npm install --save mongoose  
 
-node api.js
+nodemon api.js
 
 
 04. Register WebAPI Manual JWT | 23-Encrypt Password With Hash
@@ -144,7 +146,7 @@ npm install --save bcrypt-nodejs
 cd api/  
 npm install --save crypto  
 
-node api.js
+nodemon api.js
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.ImgxIg==.WkzcmKyO2ZLVkHGnH2fzuv2eVuRqadfCYqfuEMC5IJo=
 
 
@@ -187,3 +189,7 @@ bower install --save angular-animate
 05. Register WebAPI JWT Library | 34-Securing the Jobs Resource
 
 Nothing
+
+05. Register WebAPI JWT Library | 35-Auth Interceptor
+
+yo angular:factory authInterceptor
