@@ -199,5 +199,10 @@ yo angular:factory authInterceptor
 
 Nothing
 
-
 05. Register WebAPI JWT Library | 37-Verifying the Signature
+
+Nothing
+
+05. Register WebAPI JWT Library | 38-Design Break Optimize Alerts
+
+Nothing
