@@ -212,3 +212,13 @@ Nothing
 
 cd api/
 npm install --save jwt-simple  
+
+
+
+### 06. Login
+
+
+06. Login | 42-Login Endpoint
+
+Nothing
+  
