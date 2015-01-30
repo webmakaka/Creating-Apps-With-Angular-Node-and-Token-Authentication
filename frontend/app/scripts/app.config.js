@@ -1,6 +1,5 @@
 angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(function($urlRouterProvider, $stateProvider){
 
-
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
@@ -16,9 +15,17 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(fu
         controller: 'RegisterCtrl'
     })
 
+    .state('jobs', {
+        url: '/jobs',
+        templateUrl: '/views/jobs.html',
+        controller: 'jobsCtrl'
+    })
+
     .state('logout', {
         url: '/logout',
         controller: 'LogoutCtrl'
     });
+
+
 
 })

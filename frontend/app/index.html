@@ -25,32 +25,7 @@
     <!-- Add your site or application content here -->
     <div class="container" ng-cloak>
 
-
-        <!-- Перенести в header.html -->
-
-    <div ng-controller="HeaderCtrl" class="header">
-        <ul class="nav nav-pills pull-right">
-
-            <li ui-sref-active="active">
-                <a ui-sref="main">Home</a>
-            </li>
-
-            <li ng-hide="isAuthenticated()" ui-sref-active="active">
-                <a ui-sref="register">Register</a>
-            </li>
-
-            <li ng-show="isAuthenticated()" ui-sref-active="active">
-                <a ui-sref="logout">Logout</a>
-            </li>
-        </ul>
-        <h3 class="text-muted">My App</h3>
-        {{isAuthenticated}}
-    </div>
-
-
-        <!-- Перенести в header.html -->
-
-
+    <div ng-include src="'views/header.html'"></div>
 
       <div ui-view></div>
       <div class="alert alert-{{alert.type}} animated main-alert" ng-class="{'flipInY': alert.show, 'flipOutY': !alert.show, 'alert-hidden': !alert.hasBeenShown}">
@@ -90,6 +65,7 @@
         <script src="scripts/services/authtoken.js"></script>
         <script src="scripts/controllers/header.js"></script>
         <script src="scripts/controllers/logout.js"></script>
+        <script src="scripts/controllers/jobs.js"></script>
         <!-- endbuild -->
 </body>
 </html>
