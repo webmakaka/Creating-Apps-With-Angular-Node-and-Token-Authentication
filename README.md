@@ -220,5 +220,10 @@ npm install --save jwt-simple
 
 06. Login | 42-Login Endpoint
 
-Nothing
-  
+Nothing  
+
+06. Login | 43-Login View
+
+
+cd frontend/  
+yo angular:controller login  
