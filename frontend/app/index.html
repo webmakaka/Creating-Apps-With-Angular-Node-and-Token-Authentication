@@ -25,9 +25,14 @@
     <!-- Add your site or application content here -->
     <div class="container" ng-cloak>
 
-    <div ng-include src="'views/header.html'"></div>
+    <div ng-include="'views/header.html'"></div>
 
-      <div ui-view></div>
+        <div class="row">
+            <div class="ui-view-container">
+                <div ui-view></div>
+            </div>
+        </div>
+
       <div class="alert alert-{{alert.type}} animated main-alert" ng-class="{'flipInY': alert.show, 'flipOutY': !alert.show, 'alert-hidden': !alert.hasBeenShown}">
           <strong>{{alert.title}}</strong> {{alert.message}}
       </div>
@@ -52,6 +57,7 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

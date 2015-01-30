@@ -18,7 +18,7 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(fu
     .state('jobs', {
         url: '/jobs',
         templateUrl: '/views/jobs.html',
-        controller: 'jobsCtrl'
+        controller: 'JobsCtrl'
     })
 
     .state('logout', {

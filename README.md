@@ -39,7 +39,7 @@ yo angular:view register
 
 02. Register in Front End Views |  08-ui-router
 
-bower install angular-ui-router --save
+bower install --save angular-ui-router
 
 http://localhost/#/  
 http://localhost/#/register
@@ -84,7 +84,7 @@ Nothing
 
 03. Register Front End Controllers and Services | 16-HTTP Post
 
-bower install animate.css --save  
+bower install --save animate.css
 yo angular:service alert
 
 
@@ -176,3 +176,9 @@ yo angular:controller logout
 
 cd frontend/  
 yo angular:controller jobs
+  
+
+05. Register WebAPI JWT Library | 33-View Animations  
+
+cd frontend/
+bower install --save angular-animate
