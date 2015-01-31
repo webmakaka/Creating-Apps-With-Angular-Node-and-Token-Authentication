@@ -14,16 +14,7 @@ exports.encode = function(payload, secret){
 }
 
 exports.decode = function(token, secret){
-
-    console.log("----------- jwt.js --------------");
-    console.log("token: " + token);
-    console.log("---------------------------");
-
-
-    console.log("----------- jwt.js --------------");
-    console.log("secret: " + secret);
-    console.log("---------------------------");
-
+    
     var segments = token.split('.');
 
     if(segments.length !== 3){

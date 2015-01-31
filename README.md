@@ -203,7 +203,7 @@ Nothing
 
 Nothing
 
-05. Register WebAPI JWT Library | 38-Design Break Optimize Alerts
+05. Register WebAPI JWT Library | 38-Design Break Optimize Alerts (ошибка в api.js. Вместо payload.sub нужно !payload.sub)
 
 Nothing
 
@@ -229,4 +229,4 @@ cd frontend/
 yo angular:controller login  
 
 
-06. Login | 44-Login Controller | не работает доступ к jobs у зарегистрированных пользователей.
+06. Login | 44-Login Controller

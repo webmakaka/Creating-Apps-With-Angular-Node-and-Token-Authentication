@@ -62,8 +62,9 @@ app.post('/login', function(req, res){
 })
 
 function createSendToken(user, res){
+
     var payload = {
-        sub: user._id
+        sub: user.id
     }
 
     var token = jwt.encode(payload, "shhh..");
@@ -73,7 +74,6 @@ function createSendToken(user, res){
         token: token
     });
 }
-
 
 var jobs = [
     'Cook',
@@ -89,12 +89,12 @@ app.get('/jobs', function(req,res){
     }
 
     var token = req.headers.authorization.split(' ')[1];
+
     var payload = jwt.decode(token, "shhh..");
 
-    if(payload.sub){
+    if(!payload.sub){
         res.status(401).send({message: 'Authentication failed'});
     }
-
     res.json(jobs);
 })
 
