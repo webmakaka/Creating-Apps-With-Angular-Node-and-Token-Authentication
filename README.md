@@ -242,3 +242,11 @@ yo angular:service auth
 
 
 06. Login | 47-Register Auth Service
+
+
+06. Login | 48-Passport Login
+
+
+cd api/  
+npm install --save passport
+npm install --save passport-local
