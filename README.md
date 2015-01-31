@@ -239,3 +239,6 @@ yo angular:service auth
 
 
 06. Login | 46-Redirect
+
+
+06. Login | 47-Register Auth Service
