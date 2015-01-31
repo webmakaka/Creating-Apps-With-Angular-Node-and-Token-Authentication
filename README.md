@@ -232,8 +232,10 @@ yo angular:controller login
 06. Login | 44-Login Controller
 
 
-
 06. Login | 45-Login Auth Service
 
 cd frontend/  
 yo angular:service auth  
+
+
+06. Login | 46-Redirect

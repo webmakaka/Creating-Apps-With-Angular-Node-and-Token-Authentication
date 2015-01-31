@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
-  .service('auth', function ($http, API_URL, authToken) {
+  .service('auth', function ($http, API_URL, authToken, $state) {
 
       var url = API_URL + 'login';
 
@@ -9,8 +9,7 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
           return $http.post(url, {email:email, password:password})
           .success(function(res){
               authToken.setToken(res.token);
+              $state.go('main');
           });
       }
-
-
   });
