@@ -218,9 +218,7 @@ npm install --save jwt-simple
 ### 06. Login
 
 
-06. Login | 42-Login Endpoint
-
-Nothing  
+06. Login | 42-Login Endpoint  
 
 06. Login | 43-Login View
 
@@ -253,3 +251,7 @@ npm install --save passport-local
 
 
 06. Login | 49-Passport Register
+
+
+
+06. Login | 50-Duplicate Email Check
