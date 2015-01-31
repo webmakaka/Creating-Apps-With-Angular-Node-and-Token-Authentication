@@ -250,3 +250,6 @@ yo angular:service auth
 cd api/  
 npm install --save passport
 npm install --save passport-local
+
+
+06. Login | 49-Passport Register
