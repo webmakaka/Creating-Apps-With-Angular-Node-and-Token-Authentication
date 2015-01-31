@@ -62,16 +62,9 @@ app.post('/register', function(req, res){
     })
 })
 
-app.post('/login', function(req, res, next){
-    passport.authenticate('local', function(err, user){
-        if(err) next(err);
-
-        req.login(user, function(err){
-            if(err) next(err);
-            createSendToken(user, res);
-        })
-    })(req, res, next);
-})
+app.post('/login', passport.authenticate('local'), function(req, res){
+    createSendToken(req.user, res);
+});
 
 function createSendToken(user, res){
 
