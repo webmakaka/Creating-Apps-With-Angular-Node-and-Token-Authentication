@@ -208,7 +208,7 @@ Nothing
 Nothing
 
 
-05. Register WebAPI JWT Library | 39-Switching to Node JWT Simple
+05. Register WebAPI JWT Library | 39-Switching to Node JWT Simple  (лучше не выполнять этот шаг)
 
 cd api/
 npm install --save jwt-simple  
@@ -227,3 +227,6 @@ Nothing
 
 cd frontend/  
 yo angular:controller login  
+
+
+06. Login | 44-Login Controller | не работает доступ к jobs у зарегистрированных пользователей.

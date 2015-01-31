@@ -2,8 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var User = require('./models/User.js')
-// var jwt = require('./services/jwt.js');
-var jwt = require('./services/jwt-simple.js');
+var jwt = require('./services/jwt.js');
 
 var app = express();
 
@@ -20,7 +19,7 @@ app.use(function(req, res, next){
 app.post('/register', function(req, res){
     var user = req.body;
 
-    var newUser = new User.model({
+    var newUser = new User({
         email: user.email,
         password: user.password
     });
