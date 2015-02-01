@@ -11,4 +11,8 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
                   alert('warning', 'Something went wrong :(', err.message);
               });
       };
+
+      $scope.google = function(){
+          auth.googleAuth().thne();
+      }
   });

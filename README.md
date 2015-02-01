@@ -255,3 +255,25 @@ npm install --save passport-local
 
 
 06. Login | 50-Duplicate Email Check
+
+
+
+### 07. Auth Provider
+
+
+07. Auth Provider | 53-Google Project
+
+https://console.developers.google.com/project
+
+APIs  
++  
+Contacts API  
+Google+ API
+
+Credentilas  
++OAuth
+
+
+07. Auth Provider | 54-Window Popup
+
+По нажатию на кнопку google появляется окно с invalid request
