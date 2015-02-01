@@ -294,3 +294,7 @@ Credentilas
 
 
 07. Auth Provider | 59-Close Popup | не заработало
+
+
+
+07. Auth Provider | 60-Authorization Code to Backend | не заработало

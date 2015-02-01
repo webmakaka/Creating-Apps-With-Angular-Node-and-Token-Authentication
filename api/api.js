@@ -123,6 +123,10 @@ app.get('/jobs', function(req,res){
     res.json(jobs);
 })
 
+app.post('auth/google', function(req, res){
+    console.log(req.body.code);
+})
+
 mongoose.connect('mongodb://marley:marley@ds053678.mongolab.com:53678/psjwt')
 
 var server = app.listen(3000, function(){
