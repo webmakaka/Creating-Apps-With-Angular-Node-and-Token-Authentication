@@ -37,3 +37,8 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(fu
 })
 
 .constant('API_URL', 'http://localhost:3000/')
+
+.run(function($window){
+    var params = $window.location.search.substring(1);
+    console.log(params);
+});

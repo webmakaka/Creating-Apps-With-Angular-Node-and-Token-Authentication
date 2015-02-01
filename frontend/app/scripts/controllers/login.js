@@ -13,6 +13,6 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
       };
 
       $scope.google = function(){
-          auth.googleAuth().thne();
+          auth.googleAuth().then();
       }
   });

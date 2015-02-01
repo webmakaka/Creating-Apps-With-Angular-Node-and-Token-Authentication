@@ -282,3 +282,6 @@ Credentilas
 07. Auth Provider | 55-Google Authorization Code Request
 
 По нажатию на кнопку google появляется окно с предложением авторизоваться с помощью google
+
+
+07. Auth Provider | 56-Getting Authorization Code | не заработало
