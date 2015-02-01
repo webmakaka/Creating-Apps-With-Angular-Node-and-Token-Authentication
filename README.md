@@ -277,3 +277,8 @@ Credentilas
 07. Auth Provider | 54-Window Popup
 
 По нажатию на кнопку google появляется окно с invalid request
+
+
+07. Auth Provider | 55-Google Authorization Code Request
+
+По нажатию на кнопку google появляется окно с предложением авторизоваться с помощью google
