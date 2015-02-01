@@ -290,4 +290,7 @@ Credentilas
 07. Auth Provider | 57-Sending Authorization Code | не заработало
 
 
-07. Auth Provider | 58-Authorization Code in Main Window
+07. Auth Provider | 58-Authorization Code in Main Window | не заработало
+
+
+07. Auth Provider | 59-Close Popup | не заработало
