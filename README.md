@@ -296,5 +296,10 @@ Credentilas
 07. Auth Provider | 59-Close Popup
 
 
+07. Auth Provider | 60-Authorization Code to Backend  
 
-07. Auth Provider | 60-Authorization Code to Backend
+
+07. Auth Provider | 61-Token Exchange With Google
+
+cd api/  
+npm install --save request  

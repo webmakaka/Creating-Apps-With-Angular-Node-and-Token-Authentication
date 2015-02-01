@@ -22,8 +22,10 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
 
       var urlBuilder = [];
 
+      var clientId = '710007462115-pn3o6o926mr9os2t8d16tq91u2q3vdml.apps.googleusercontent.com';
+
       urlBuilder.push('response_type=code',
-                      'client_id=710007462115-pn3o6o926mr9os2t8d16tq91u2q3vdml.apps.googleusercontent.com',
+                      'client_id=' + clientId,
                       'redirect_uri=' + window.location.origin,
                       'scope=profile email')
 
@@ -45,7 +47,9 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
                   popup.close();
 
                   $http.post(API_URL + 'auth/google', {
-                      code: code
+                      code: code,
+                      clientId: clientId,
+                      redirectUri: window.location.origin
                   });
               }
           })
