@@ -40,5 +40,12 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(fu
 
 .run(function($window){
     var params = $window.location.search.substring(1);
-    console.log(params);
+
+    if(params && $windows.opener && $window.opener.location.origin === $window.origin){
+        var pair = params.split('=');
+        var code = decodeURIComponent(pair[1]);
+
+        $window.opener.postMessage(code, $window.location.origin);
+
+    }
 });
