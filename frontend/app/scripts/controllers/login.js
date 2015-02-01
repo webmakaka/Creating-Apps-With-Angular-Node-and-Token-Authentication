@@ -2,6 +2,7 @@
 
 angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
   .controller('LoginCtrl', function ($scope, alert, auth) {
+
       $scope.submit = function(){
           auth.login($scope.email, $scope.password)
               .success(function(res){
@@ -14,5 +15,5 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
 
       $scope.google = function(){
           auth.googleAuth().then();
-      }
+      };
   });

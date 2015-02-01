@@ -108,6 +108,7 @@ var jobs = [
 ];
 
 app.get('/jobs', function(req,res){
+    console.log("jobs");
 
     if(!req.headers.authorization){
         return res.status(401).send({message: 'You are not authorized'});
@@ -121,11 +122,11 @@ app.get('/jobs', function(req,res){
         res.status(401).send({message: 'Authentication failed'});
     }
     res.json(jobs);
-})
+});
 
-app.post('auth/google', function(req, res){
+app.post('/auth/google', function(req,res){
     console.log(req.body.code);
-})
+});
 
 mongoose.connect('mongodb://marley:marley@ds053678.mongolab.com:53678/psjwt')
 

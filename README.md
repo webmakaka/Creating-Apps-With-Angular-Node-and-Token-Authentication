@@ -284,17 +284,17 @@ Credentilas
 По нажатию на кнопку google появляется окно с предложением авторизоваться с помощью google
 
 
-07. Auth Provider | 56-Getting Authorization Code | не заработало
+07. Auth Provider | 56-Getting Authorization Code
 
 
-07. Auth Provider | 57-Sending Authorization Code | не заработало
+07. Auth Provider | 57-Sending Authorization Code
 
 
-07. Auth Provider | 58-Authorization Code in Main Window | не заработало
+07. Auth Provider | 58-Authorization Code in Main Window
 
 
-07. Auth Provider | 59-Close Popup | не заработало
+07. Auth Provider | 59-Close Popup
 
 
 
-07. Auth Provider | 60-Authorization Code to Backend | не заработало
+07. Auth Provider | 60-Authorization Code to Backend

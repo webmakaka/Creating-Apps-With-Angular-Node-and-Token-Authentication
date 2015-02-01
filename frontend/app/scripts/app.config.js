@@ -39,13 +39,13 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(fu
 .constant('API_URL', 'http://localhost:3000/')
 
 .run(function($window){
+
     var params = $window.location.search.substring(1);
 
-    if(params && $windows.opener && $window.opener.location.origin === $window.origin){
+    if(params && $window.opener && $window.opener.location.origin === $window.location.origin){
+
         var pair = params.split('=');
         var code = decodeURIComponent(pair[1]);
-
         $window.opener.postMessage(code, $window.location.origin);
-
     }
 });
