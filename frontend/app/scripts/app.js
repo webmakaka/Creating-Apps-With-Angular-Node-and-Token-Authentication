@@ -1,4 +1,4 @@
 'use strict';
 
 angular
-  .module('creatingAppsWithAngularNodeAndTokenAuthenticationApp', ['ui.router', 'ngAnimate']);
+  .module('creatingAppsWithAngularNodeAndTokenAuthenticationApp', ['ui.router', 'ngAnimate', 'satellizer']);

@@ -1,4 +1,4 @@
-angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(function($urlRouterProvider, $stateProvider, $httpProvider){
+angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(function($urlRouterProvider, $stateProvider, $httpProvider, $authProvider, API_URL){
 
     $urlRouterProvider.otherwise('/');
 
@@ -31,6 +31,11 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(fu
         url: '/logout',
         controller: 'LogoutCtrl'
     });
+
+    $authProvider.google({
+        clientId: '710007462115-pn3o6o926mr9os2t8d16tq91u2q3vdml.apps.googleusercontent.com',
+        url: API_URL + 'auth/google'
+    })
 
     $httpProvider.interceptors.push('authInterceptor');
 
