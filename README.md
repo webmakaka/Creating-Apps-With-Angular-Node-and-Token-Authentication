@@ -1,267 +1,210 @@
-# Creating-Apps-With-Angular-Node-and-Token-Authentication
+## Creating-Apps-With-Angular-Node-and-Token-Authentication
 [Pluralsight] Creating Apps With Angular, Node, and Token Authentication [2014, ENG]
-
-
-
 
 ### 02. Register in Front End Views  
 
-02. Register in Front End Views | 05-Environment Setup  
+02\. Register in Front End Views | 05-Environment Setup  
 
-yum install -y libpng-devel  
+    yum install -y libpng-devel  
 
+    npm install -g nodemon  
+    npm install -g yo  
+    npm install -g bower  
+    npm install -g grunt-cli  
+    npm install -g generator-angular
 
-npm install -g nodemon  
-npm install -g yo  
-npm install -g bower  
-npm install -g grunt-cli  
-npm install -g generator-angular
-
-yo angular  
+    yo angular  
 
 ? Would you like to use Sass (with Compass)? (Y/n) n  
 ? Would you like to include Bootstrap? Yes  
 ? Which modules would you like to include?  Nothing
 
 
-grunt serve
+    grunt serve
 
 http://localhost
 
+02\. Register in Front End Views | 06-Generated Angular Project  
+02\. Register in Front End Views |  07-Register View
+
+    yo angular:view register  
 
 
-02. Register in Front End Views | 06-Generated Angular Project  
+02\. Register in Front End Views |  08-ui-router
 
-Nothing  
-
-02. Register in Front End Views |  07-Register View
-
-yo angular:view register  
-
-
-02. Register in Front End Views |  08-ui-router
-
-bower install --save angular-ui-router
+    bower install --save angular-ui-router
 
 http://localhost/#/  
 http://localhost/#/register
 
-
-02. Register in Front End Views |  09-App Theme
+02\. Register in Front End Views |  09-App Theme
 
 http://bootswatch.com/
 
 Theme: SuperHero
 
-
 http://bootsnipp.com/snippets/featured/login-screen-with-background
 
+02\. Register in Front End Views |  10-ui-sref active
 
-
-02. Register in Front End Views |  10-ui-sref active
-
-
-02. Register in Front End Views |  11-Register View Fixes
-
-
+02\. Register in Front End Views |  11-Register View Fixes
 
 ### 03. Register Front End Controllers and Services
 
-03. Register Front End Controllers and Services | 14-Match Password Directive  
+03\. Register Front End Controllers and Services | 14-Match Password Directive  
 
-yo angular:directive validateEquals  
+    yo angular:directive validateEquals  
 
 
-03. Register Front End Controllers and Services | 15-Register Controller  
+03\. Register Front End Controllers and Services | 15-Register Controller  
 
-yo angular:controller register  
+    yo angular:controller register  
 
 По нажатию на Submit, в консоль пишется "test"  
 
+03\. Register Front End Controllers and Services | 16-HTTP Post
+03\. Register Front End Controllers and Services | 16-HTTP Post
 
-03. Register Front End Controllers and Services | 16-HTTP Post
-
-Nothing
-
-
-03. Register Front End Controllers and Services | 16-HTTP Post
-
-bower install --save animate.css
-yo angular:service alert
+    bower install --save animate.css
+    yo angular:service alert
 
 
-03. Register Front End Controllers and Services | 17-Alert Service
+03\. Register Front End Controllers and Services | 17-Alert Service
 
 Неудачная попытка регистрации в системе.
 
-
-
 ### 04. Register WebAPI Manual JWT
 
-04. Register WebAPI Manual JWT | 20-API Environment Setup  
+04\. Register WebAPI Manual JWT | 20-API Environment Setup  
 
-mkdir frontend  
-mkdir api  
+    mkdir frontend  
+    mkdir api  
 
-Все кроме git в /frontend  
-cd api/  
+Все кроме git в /frontend
 
-npm init  
-npm install --save express
-
-nodemon api.js
+    cd api/  
+    npm init  
+    npm install --save express
+    nodemon api.js
 
 С помощью PostMan делаю POST запрос localhost/register
 получаю ответ.
 
 
-04. Register WebAPI Manual JWT | 21-API Register Post  
+04\. Register WebAPI Manual JWT | 21-API Register Post  
 
-cd api/  
-npm install --save body-parser  
-
-nodemon api.js
-
-
-04. Register WebAPI Manual JWT | 22-MongoDB Save User
+    cd api/  
+    npm install --save body-parser  
+    nodemon api.js
 
 
-cd api/  
-npm install --save mongoose  
+04\. Register WebAPI Manual JWT | 22-MongoDB Save User
 
-nodemon api.js
+    cd api/  
+    npm install --save mongoose  
+    nodemon api.js
 
+04\. Register WebAPI Manual JWT | 23-Encrypt Password With Hash
 
-04. Register WebAPI Manual JWT | 23-Encrypt Password With Hash
+    cd api/  
+    npm install --save bcrypt-nodejs  
 
-cd api/  
-npm install --save bcrypt-nodejs  
+04\. Register WebAPI Manual JWT | 24-Hide Password  
 
+04\. Register WebAPI Manual JWT | 25-JWT Encoding From Scratch  
 
-04. Register WebAPI Manual JWT | 24-Hide Password  
+    cd api/  
+    npm install --save crypto  
+    nodemon api.js
 
-
-04. Register WebAPI Manual JWT | 25-JWT Encoding From Scratch  
-
-cd api/  
-npm install --save crypto  
-
-nodemon api.js
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.ImgxIg==.WkzcmKyO2ZLVkHGnH2fzuv2eVuRqadfCYqfuEMC5IJo=
 
+04\. Register WebAPI Manual JWT | 26-Token Passed With Register  
 
-04. Register WebAPI Manual JWT | 26-Token Passed With Register  
+04\. Register WebAPI Manual JWT | 27-Authtoken Factory  
 
+    cd frontend/
+    yo angular:factory authToken
 
-04. Register WebAPI Manual JWT | 27-Authtoken Factory  
+04\. Register WebAPI Manual JWT | 28-isauthenticated
 
-cd frontend/
-yo angular:factory authToken
-
-04. Register WebAPI Manual JWT | 28-isauthenticated
-
-cd frontend/  
-yo angular:controller header
-
-
+    cd frontend/  
+    yo angular:controller header
 
 ### 05. Register WebAPI JWT Library
 
-05. Register WebAPI JWT Library | 31-Logout
+05\. Register WebAPI JWT Library | 31-Logout
 
-cd frontend/  
-yo angular:controller logout  
+    cd frontend/  
+    yo angular:controller logout  
 
+05\. Register WebAPI JWT Library | 32-Jobs and Greetings
 
-05. Register WebAPI JWT Library | 32-Jobs and Greetings
-
-
-cd frontend/  
-yo angular:controller jobs
+    cd frontend/  
+    yo angular:controller jobs
 
 
-05. Register WebAPI JWT Library | 33-View Animations  
+05\. Register WebAPI JWT Library | 33-View Animations  
 
-cd frontend/
-bower install --save angular-animate
-
-
-05. Register WebAPI JWT Library | 34-Securing the Jobs Resource
-
-Nothing
-
-05. Register WebAPI JWT Library | 35-Auth Interceptor
-
-yo angular:factory authInterceptor
+    cd frontend/
+    bower install --save angular-animate
 
 
-05. Register WebAPI JWT Library | 36-JWT Decoding From Scratch
+05\. Register WebAPI JWT Library | 34-Securing the Jobs Resource
+05\. Register WebAPI JWT Library | 35-Auth Interceptor
 
-Nothing
-
-05. Register WebAPI JWT Library | 37-Verifying the Signature
-
-Nothing
-
-05. Register WebAPI JWT Library | 38-Design Break Optimize Alerts (ошибка в api.js. Вместо payload.sub нужно !payload.sub)
-
-Nothing
+    yo angular:factory authInterceptor
 
 
-05. Register WebAPI JWT Library | 39-Switching to Node JWT Simple  (лучше не выполнять этот шаг)
+05\. Register WebAPI JWT Library | 36-JWT Decoding From Scratch
 
-cd api/
-npm install --save jwt-simple  
+05\. Register WebAPI JWT Library | 37-Verifying the Signature
 
+05\. Register WebAPI JWT Library | 38-Design Break Optimize Alerts (ошибка в api.js. Вместо payload.sub нужно !payload.sub)
 
+05\. Register WebAPI JWT Library | 39-Switching to Node JWT Simple  (лучше не выполнять этот шаг)
+
+    cd api/
+    npm install --save jwt-simple  
 
 ### 06. Login
 
 
-06. Login | 42-Login Endpoint  
+06\. Login | 42-Login Endpoint  
 
-06. Login | 43-Login View
+06\. Login | 43-Login View
 
-
-cd frontend/  
-yo angular:controller login  
-
-
-06. Login | 44-Login Controller
+    cd frontend/  
+    yo angular:controller login  
 
 
-06. Login | 45-Login Auth Service
-
-cd frontend/  
-yo angular:service auth  
+06\. Login | 44-Login Controller
 
 
-06. Login | 46-Redirect
+06\. Login | 45-Login Auth Service
+
+    cd frontend/  
+    yo angular:service auth  
 
 
-06. Login | 47-Register Auth Service
+06\. Login | 46-Redirect
 
 
-06. Login | 48-Passport Login
+06\. Login | 47-Register Auth Service
 
 
-cd api/  
-npm install --save passport
-npm install --save passport-local
+06\. Login | 48-Passport Login
 
+    cd api/  
+    npm install --save passport
+    npm install --save passport-local
 
-06. Login | 49-Passport Register
-
-
-
-06. Login | 50-Duplicate Email Check
-
-
+06\. Login | 49-Passport Register
+06\. Login | 50-Duplicate Email Check
 
 ### 07. Auth Provider
 
-
-07. Auth Provider | 53-Google Project
+07\. Auth Provider | 53-Google Project
 
 https://console.developers.google.com/project
 
@@ -274,85 +217,87 @@ Credentilas
 +OAuth
 
 
-07. Auth Provider | 54-Window Popup
+07\. Auth Provider | 54-Window Popup
 
 По нажатию на кнопку google появляется окно с invalid request
 
 
-07. Auth Provider | 55-Google Authorization Code Request
+07\. Auth Provider | 55-Google Authorization Code Request
 
 По нажатию на кнопку google появляется окно с предложением авторизоваться с помощью google
 
 
-07. Auth Provider | 56-Getting Authorization Code
+07\. Auth Provider | 56-Getting Authorization Code
 
 
-07. Auth Provider | 57-Sending Authorization Code
+07\. Auth Provider | 57-Sending Authorization Code
 
 
-07. Auth Provider | 58-Authorization Code in Main Window
+07\. Auth Provider | 58-Authorization Code in Main Window
 
 
-07. Auth Provider | 59-Close Popup
+07\. Auth Provider | 59-Close Popup
 
 
-07. Auth Provider | 60-Authorization Code to Backend  
+07\. Auth Provider | 60-Authorization Code to Backend  
 
 
-07. Auth Provider | 61-Token Exchange With Google  
+07\. Auth Provider | 61-Token Exchange With Google  
 
-cd api/  
-npm install --save request  
-
-
-07. Auth Provider | 62-Google Plus API Profile  
+    cd api/  
+    npm install --save request  
 
 
-07. Auth Provider | 63-Create JWT From Google Profile  
+07\. Auth Provider | 62-Google Plus API Profile  
 
 
-07. Auth Provider | 64-Frontend Authentication
+07\. Auth Provider | 63-Create JWT From Google Profile  
 
 
+07\. Auth Provider | 64-Frontend Authentication
 
 ### 08. Sattelizer  
 
 https://github.com/sahat/satellizer
 
-
-08. Sattelizer | 67-Satellizer Google Login
-
-
-cd frontend/  
-bower install --save satellizer  
+08\. Sattelizer | 67-Satellizer Google Login
 
 
-08. Sattelizer | 68-Is Authenticated
+    cd frontend/  
+    bower install --save satellizer  
+
+
+08\. Sattelizer | 68-Is Authenticated
 
 http://momentjs.com/  
 
 
-cd api/  
-npm install --save moment  
+    cd api/  
+    npm install --save moment  
 
 
-08. Sattelizer | 69-Logout
+08\. Sattelizer | 69-Logout
 
 
-08. Sattelizer | 70-Local Login
+08\. Sattelizer | 70-Local Login
 
 
-08. Sattelizer | 71-Local Register  
+08\. Sattelizer | 71-Local Register  
 
 
-08. Sattelizer | 72-Facebook Auth Backend
+08\. Sattelizer | 72-Facebook Auth Backend
 
 https://developers.facebook.com/docs/facebook-login/access-tokens
 
-cd api/  
-npm install --save querystring  
+    cd api/  
+    npm install --save querystring  
 
 
-08. Sattelizer | 73-Facebook Auth Frontend
+08\. Sattelizer | 73-Facebook Auth Frontend
 
 developers.facebook.com/apps/  
+
+
+### 09. Email Validation
+
+09\. Email Validation | 76-Cleanup
