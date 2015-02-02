@@ -340,3 +340,6 @@ npm install --save moment
 
 
 08. Sattelizer | 70-Local Login
+
+
+08. Sattelizer | 71-Local Register
