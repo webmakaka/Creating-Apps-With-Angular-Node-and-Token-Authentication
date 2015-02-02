@@ -312,3 +312,25 @@ npm install --save request
 
 
 07. Auth Provider | 64-Frontend Authentication
+
+
+
+### 08. Sattelizer  
+
+https://github.com/sahat/satellizer
+
+
+08. Sattelizer | 67-Satellizer Google Login  | не заработало
+
+
+cd frontend/  
+bower install --save satellizer  
+
+
+08. Sattelizer | 68-Is Authenticated  | не заработало
+
+http://momentjs.com/  
+
+
+cd api/  
+npm install --save moment  

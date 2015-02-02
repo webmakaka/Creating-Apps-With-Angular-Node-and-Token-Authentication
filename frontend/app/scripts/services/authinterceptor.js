@@ -8,7 +8,7 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
           var token = authToken.getToken();
 
           if(token){
-              config.headers.Authorization = '!!!!!!!!!! ' + token;
+              config.headers.Authorization = 'Bearer ' + token;
           }
 
           return config;

@@ -7,6 +7,7 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 // var GoogleStrategy = require('passport-google');
 var request = require('request');
+var moment = require('moment');
 
 
 var app = express();
@@ -92,7 +93,8 @@ app.post('/login', passport.authenticate('local-login'), function(req, res){
 function createSendToken(user, res){
 
     var payload = {
-        sub: user.id
+        sub: user.id,
+        exp: moment().add(10, 'days').unix()
     }
 
     var token = jwt.encode(payload, "shhh..");
@@ -111,7 +113,6 @@ var jobs = [
 ];
 
 app.get('/jobs', function(req,res){
-    console.log("jobs");
 
     if(!req.headers.authorization){
         return res.status(401).send({message: 'You are not authorized'});
