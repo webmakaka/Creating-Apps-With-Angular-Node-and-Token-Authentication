@@ -8,12 +8,16 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
               .success(function(res){
                   alert('success', 'Welcome', 'Thanks for coming back ' + res.user.email + '!');
               })
-              .error(function(err){
-                  alert('warning', 'Something went wrong :(', err.message);
-              });
+              .error(handleError);
       };
 
       $scope.google = function(){
-          auth.googleAuth().then();
+          auth.googleAuth().then(function(res){
+              alert('success', 'Welcome', 'Thanks for coming back ' + res.user.displayName + '!');
+          },handleError);
       };
+
+      function handleError(err){
+          alert('warning', 'Something went wrong :(', err.message);
+      }
   });

@@ -309,3 +309,6 @@ npm install --save request
 
 
 07. Auth Provider | 63-Create JWT From Google Profile  
+
+
+07. Auth Provider | 64-Frontend Authentication
