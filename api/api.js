@@ -5,10 +5,9 @@ var User = require('./models/User.js')
 var jwt = require('./services/jwt.js');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-// var GoogleStrategy = require('passport-google');
 var request = require('request');
-var moment = require('moment');
-
+var facebookAuth = require('./services/facebookAuth.js');
+var createSendToken = require('./services/jwt.js');
 
 var app = express();
 
@@ -91,20 +90,7 @@ app.post('/login', passport.authenticate('local-login'), function(req, res){
     createSendToken(req.user, res);
 });
 
-function createSendToken(user, res){
-
-    var payload = {
-        sub: user.id,
-        exp: moment().add(10, 'days').unix()
-    }
-
-    var token = jwt.encode(payload, "shhh..");
-
-    res.status(200).send({
-        user: user.toJSON(),
-        token: token
-    });
-}
+app.post('/auth/facebook', facebookAuth);
 
 var jobs = [
     'Cook',

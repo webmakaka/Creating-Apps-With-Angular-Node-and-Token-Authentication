@@ -342,4 +342,12 @@ npm install --save moment
 08. Sattelizer | 70-Local Login
 
 
-08. Sattelizer | 71-Local Register
+08. Sattelizer | 71-Local Register  
+
+
+08. Sattelizer | 72-Facebook Auth Backend
+
+https://developers.facebook.com/docs/facebook-login/access-tokens
+
+cd api/  
+npm install --save querystring  
