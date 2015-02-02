@@ -337,3 +337,6 @@ npm install --save moment
 
 
 08. Sattelizer | 69-Logout
+
+
+08. Sattelizer | 70-Local Login
