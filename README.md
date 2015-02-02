@@ -320,14 +320,14 @@ npm install --save request
 https://github.com/sahat/satellizer
 
 
-08. Sattelizer | 67-Satellizer Google Login  | не заработало
+08. Sattelizer | 67-Satellizer Google Login
 
 
 cd frontend/  
 bower install --save satellizer  
 
 
-08. Sattelizer | 68-Is Authenticated  | не заработало
+08. Sattelizer | 68-Is Authenticated
 
 http://momentjs.com/  
 
@@ -336,4 +336,4 @@ cd api/
 npm install --save moment  
 
 
-08. Sattelizer | 69-Logout  | не заработало
+08. Sattelizer | 69-Logout

@@ -20,7 +20,8 @@ passport.serializeUser(function(user, done){
 })
 
 app.use(function(req, res, next){
-    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Origin', 'http://localhost');
+    res.header('Access-Control-Allow-Credentials', 'true');
     res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
@@ -145,7 +146,6 @@ app.post('/auth/google', function(req,res){
         json: true,
         form: params
     }, function(err, response, token){
-
         var accessToken = token.access_token;
         var headers = {
             Authorization: 'Bearer ' + accessToken
@@ -156,10 +156,11 @@ app.post('/auth/google', function(req,res){
             headers: headers,
             json: true
         }, function(err, response, profile){
+
             User.findOne({
                 googleId: profile.sub
             }, function(err, foundUser){
-                if(foundUser) return CreateSendToken(foundUser, res);
+                if(foundUser) return createSendToken(foundUser, res);
 
                 var newUser = new User();
                 newUser.googleId = profile.sub;
