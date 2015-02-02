@@ -155,7 +155,19 @@ app.post('/auth/google', function(req,res){
             headers: headers,
             json: true
         }, function(err, response, profile){
-            console.log(profile);
+            User.findOne({
+                googleId: profile.sub
+            }, function(err, foundUser){
+                if(foundUser) return CreateSendToken(foundUser, res);
+
+                var newUser = new User();
+                newUser.googleId = profile.sub;
+                newUser.displayName = profile.name;
+                newUser.save(function(err){
+                    if (err) return next(err);
+                    createSendToken(newUser, res);
+                })
+            });
         })
     });
 });

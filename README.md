@@ -299,10 +299,13 @@ Credentilas
 07. Auth Provider | 60-Authorization Code to Backend  
 
 
-07. Auth Provider | 61-Token Exchange With Google
+07. Auth Provider | 61-Token Exchange With Google  
 
 cd api/  
 npm install --save request  
 
 
-07. Auth Provider | 62-Google Plus API Profile
+07. Auth Provider | 62-Google Plus API Profile  
+
+
+07. Auth Provider | 63-Create JWT From Google Profile  
