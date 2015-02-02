@@ -334,3 +334,6 @@ http://momentjs.com/
 
 cd api/  
 npm install --save moment  
+
+
+08. Sattelizer | 69-Logout  | не заработало
