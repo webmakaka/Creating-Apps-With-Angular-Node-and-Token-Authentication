@@ -301,3 +301,5 @@ developers.facebook.com/apps/
 ### 09. Email Validation
 
 09\. Email Validation | 76-Cleanup
+
+09\. Email Validation | 77-Email Verification Token
