@@ -351,3 +351,8 @@ https://developers.facebook.com/docs/facebook-login/access-tokens
 
 cd api/  
 npm install --save querystring  
+
+
+08. Sattelizer | 73-Facebook Auth Frontend
+
+developers.facebook.com/apps/  

@@ -2,9 +2,9 @@ var request = require('request');
 var qs = require('querystring');
 var createSendToken = require('./jwt.js');
 var config = require('./config.js');
-var User = require('./models/User.js');
+var User = require('../models/User.js');
 
-module.exports = funcction(req, res){
+module.exports = function(req, res){
     var accessTokenUrl = 'https://graph.facebook.com/oauth/access_token';
     var graphApiUrl = 'https://graph.facebook.com/me';
 
@@ -19,7 +19,7 @@ module.exports = funcction(req, res){
         url: accessTokenUrl,
         qs: params
     }, function(err, response, accessToken){
-        accessToken = qs.parse(acessToken);
+        accessToken = qs.parse(accessToken);
 
         request.get({
             url: graphApiUrl,
@@ -34,7 +34,7 @@ module.exports = funcction(req, res){
 
                     var newUser = new User();
                     newUser.facebookId = profile.id;
-                    user.displayName = profile.name;
+                    newUser.displayName = profile.name;
                     newUser.save(function(err){
                         createSendToken(newUser, res);
                     })

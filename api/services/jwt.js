@@ -1,6 +1,5 @@
-var jwt = require('./services/jwt.js');
+var jwt = require('jwt-simple');
 var moment = require('moment');
-
 
 module.exports = function(user, res){
         var payload = {

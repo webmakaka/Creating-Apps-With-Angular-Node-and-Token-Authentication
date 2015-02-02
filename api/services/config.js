@@ -1,1 +1,1 @@
-exports.FACEBOOK_SECRET = '';
+exports.FACEBOOK_SECRET = '2c1bb2c2003e63c109f1d205c91bdf30';

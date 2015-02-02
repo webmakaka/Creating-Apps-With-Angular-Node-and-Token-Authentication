@@ -40,6 +40,11 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(fu
         url: API_URL + 'auth/google'
     });
 
+    $authProvider.facebook({
+        clientId: '677323495726383',
+        url: API_URL + 'auth/facebook'
+    });
+
     $httpProvider.interceptors.push('authInterceptor');
 
 })
