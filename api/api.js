@@ -130,6 +130,7 @@ app.get('/jobs', function(req,res){
 app.post('/auth/google', function(req,res){
 
     var url = 'https://accounts.google.com/o/oauth2/token';
+    var apiUrl = 'https://www.googleapis.com/plus/v1/people/me/openIdConnect';
 
     var params = {
         client_id: req.body.clientId,
@@ -139,13 +140,23 @@ app.post('/auth/google', function(req,res){
         client_secret: 'xjJ9wOaE2hcKGZcUBnso_XaO'
     }
 
-    console.log(req.body.code);
-
     request.post(url, {
         json: true,
         form: params
     }, function(err, response, token){
-        console.log(token);
+
+        var accessToken = token.access_token;
+        var headers = {
+            Authorization: 'Bearer ' + accessToken
+        }
+
+        request.get({
+            url: apiUrl,
+            headers: headers,
+            json: true
+        }, function(err, response, profile){
+            console.log(profile);
+        })
     });
 });
 
