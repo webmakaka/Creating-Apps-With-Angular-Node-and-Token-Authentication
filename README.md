@@ -329,3 +329,6 @@ https://github.com/andris9/nodemailer-smtp-transport
 
 Скопировали в форму сайта http://zurb.com/ink/inliner.php файл emailVerification.html
 и заменили его содержимое сгенерированным контентом.
+
+
+09\. Email Validation | 82-Endpoint Handler

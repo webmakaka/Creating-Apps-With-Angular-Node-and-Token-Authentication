@@ -35,7 +35,9 @@ passport.use('local-login', LocalStrategy.login);
 app.post('/register', passport.authenticate('local-register'), function(req, res){
     emailVerification.send(req.user.email);
     createSendToken(req.user, res);
-})
+});
+
+app.get('/auth/verifyEmail', emailVerification.handler);
 
 app.post('/login', passport.authenticate('local-login'), function(req, res){
     createSendToken(req.user, res);
