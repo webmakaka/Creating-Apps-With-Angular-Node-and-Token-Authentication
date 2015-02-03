@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var jwt = require('jwt-simple');
 var passport = require('passport');
+var createSendToken = require('./services/jwt.js');
 var googleAuth = require('./services/googleAuth.js');
 var facebookAuth = require('./services/facebookAuth.js');
 var LocalStrategy = require('./services/localStrategy.js');
@@ -10,8 +11,6 @@ var jobs = require('./services/jobs.js');
 var emailVerification = require('./services/emailVerification.js');
 
 var app = express();
-
-emailVerification.send('fake@fake.com');
 
 app.use(bodyParser.json());
 app.use(passport.initialize());
@@ -34,6 +33,7 @@ passport.use('local-register', LocalStrategy.register);
 passport.use('local-login', LocalStrategy.login);
 
 app.post('/register', passport.authenticate('local-register'), function(req, res){
+    emailVerification.send(req.user.email);
     createSendToken(req.user, res);
 })
 

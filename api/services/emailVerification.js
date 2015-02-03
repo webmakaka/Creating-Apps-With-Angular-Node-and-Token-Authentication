@@ -2,6 +2,9 @@ var _ = require('underscore');
 var fs = require('fs');
 var jwt = require('jwt-simple');
 var config = require('./config.js');
+var nodemailer = require('nodemailer');
+var smtpTransport = require('nodemailer-smtp-transport');
+
 
 var model = {
     verifyUrl: 'http://loclhost:3000/auth/verifyEmail?token=',
@@ -18,7 +21,32 @@ exports.send =  function(email){
 
     var token = jwt.encode(payload, config.EMAIL_SECRET);
 
-    console.log(getHtml(token));
+    var transporter = nodemailer.createTransport(smtpTransport({
+        host: config.SMTP_SERVER,
+        secure: true,
+        auth: {
+            user: config.SMTP_USERNAME,
+            pass: config.SMTP_PASSWORD
+        }
+    }));
+
+    var mailOptions = {
+        from: 'Accounts <accounts@socialplay.com>',
+        to: email,
+        subject: 'psJwt Account Verification',
+        html: getHtml(token)
+    };
+
+    transporter.sendMail(mailOptions, function(err, info){
+        if(err){
+            console.log("ERROR");
+            console.log(err);
+            //return res.status(500, err);
+        }
+
+        console.log("OK");
+        console.log('email sent ', info.response);
+    })
 }
 
 function getHtml(token){

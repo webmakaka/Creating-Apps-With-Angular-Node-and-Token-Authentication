@@ -314,4 +314,18 @@ http://underscorejs.org/#template
 
 
     cd api/  
-    npm install --save underscore  
+    npm install --save underscore
+
+
+09\. Email Validation | 81-Nodemailer  
+https://github.com/andris9/Nodemailer  
+https://github.com/andris9/nodemailer-smtp-transport
+
+
+    cd api/  
+    npm install --save nodemailer
+    npm install --save nodemailer-smtp-transport
+
+
+Скопировали в форму сайта http://zurb.com/ink/inliner.php файл emailVerification.html
+и заменили его содержимое сгенерированным контентом.
