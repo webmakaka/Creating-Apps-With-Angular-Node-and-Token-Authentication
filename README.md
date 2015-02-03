@@ -1,6 +1,13 @@
 ## Creating-Apps-With-Angular-Node-and-Token-Authentication
 [Pluralsight] Creating Apps With Angular, Node, and Token Authentication [2014, ENG]
 
+ports:  
+9000 - grunt (у меня на 80)
+3000 - express
+1337 - sails
+
+
+
 ### 02. Register in Front End Views  
 
 02\. Register in Front End Views | 05-Environment Setup  
@@ -361,4 +368,36 @@ What would you like Sails to do?
 
 http://localhost:1337/user  
 http://localhost:1337/user/create?name=Alex  
-http://localhost:1337/user/update/1/?email=alex@example.com
+http://localhost:1337/user/update/1/?email=alex@example.com  
+http://localhost:1337/user/create?name=Tim  
+http://localhost:1337/user  
+
+
+http://sailsjs.org/#/documentation/reference
+
+
+10\. Authentication With Sails | 87-Getting Jobs  
+
+
+    cd sapi
+    sails generate api job
+    sails lift
+
+
+http://localhost:1337/job/create?title=cook
+http://localhost:1337/job/create?title=programmer
+http://localhost:1337/job/create?title=super%20hero
+http://localhost:1337/job/create?title=nicorn%20whisperer
+http://localhost:1337/job
+
+внесли правки в cors.js
+
+sails lift
+What would you like Sails to do?
+2
+
+
+
+http://localhost/#/jobs
+
+получили данные с sails
