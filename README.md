@@ -333,6 +333,32 @@ https://github.com/andris9/nodemailer-smtp-transport
 
 09\. Email Validation | 82-Endpoint Handler
 
-  
+
 
 09\. Email Validation | 83-Front End Check
+
+
+### 10. Authentication With Sails
+
+
+10\. Authentication With Sails | 86-Sails Overview
+
+https://github.com/balderdashy/sails-docs
+
+
+    npm install -g sails
+    sails new sapi
+    cd sapi
+    sails lift
+
+http://localhost:1337
+
+    sails generate api user
+    sails lift
+
+What would you like Sails to do?
+3
+
+http://localhost:1337/user  
+http://localhost:1337/user/create?name=Alex  
+http://localhost:1337/user/update/1/?email=alex@example.com
