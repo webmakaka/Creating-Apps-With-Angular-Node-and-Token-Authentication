@@ -7,7 +7,11 @@ var googleAuth = require('./services/googleAuth.js');
 var facebookAuth = require('./services/facebookAuth.js');
 var LocalStrategy = require('./services/localStrategy.js');
 var jobs = require('./services/jobs.js');
+var emailVerification = require('./services/emailVerification.js');
+
 var app = express();
+
+emailVerification.send('fake@fake.com');
 
 app.use(bodyParser.json());
 app.use(passport.initialize());
