@@ -332,3 +332,7 @@ https://github.com/andris9/nodemailer-smtp-transport
 
 
 09\. Email Validation | 82-Endpoint Handler
+
+  
+
+09\. Email Validation | 83-Front End Check
