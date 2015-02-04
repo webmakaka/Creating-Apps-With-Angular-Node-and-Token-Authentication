@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(function($urlRouterProvider, $stateProvider, $httpProvider, $authProvider, API_URL){
 
     $urlRouterProvider.otherwise('/');

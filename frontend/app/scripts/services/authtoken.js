@@ -25,7 +25,7 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
           cachedToken = null;
           storage.removeItem(userToken);
       }
-    }
+  };
 
     return authToken;
 

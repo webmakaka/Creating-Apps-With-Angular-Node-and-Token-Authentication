@@ -11,14 +11,14 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
       this.login = function(email, password){
           return $http.post(API_URL + 'login', {email:email, password:password})
           .success(authSuccessful);
-      }
+      };
 
       this.register = function(email,password){
           return $http.post(API_URL + 'register', {
               email: email,
               password: password
           }).success(authSuccessful);
-      }
+      };
 
       var urlBuilder = [];
 
@@ -27,7 +27,7 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
       urlBuilder.push('response_type=code',
                       'client_id=' + clientId,
                       'redirect_uri=' + window.location.origin,
-                      'scope=profile email')
+                      'scope=profile email');
 
       this.googleAuth = function(){
 
@@ -59,6 +59,6 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp')
               }
           });
           return deferred.promise;
-      }
+      };
 
   });
