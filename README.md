@@ -401,3 +401,15 @@ What would you like Sails to do?
 http://localhost/#/jobs
 
 получили данные с sails
+
+
+
+10\. Authentication With Sails | 88-Authenticating With Policy Middleware | не заработало
+
+    cd sapi
+    npm install --save jwt-simple
+
+    sails lift
+
+What would you like Sails to do?
+2
