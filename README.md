@@ -2,9 +2,10 @@
 [Pluralsight] Creating Apps With Angular, Node, and Token Authentication [2014, ENG]
 
 ports:  
-9000 - grunt (у меня на 80)
-3000 - express
-1337 - sails
+
+    9000 - grunt (у меня на 80)
+    3000 - express
+    1337 - sails
 
 
 
