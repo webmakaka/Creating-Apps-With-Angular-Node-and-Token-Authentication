@@ -413,3 +413,10 @@ http://localhost/#/jobs
 
 What would you like Sails to do?
 2
+
+
+10\. Authentication With Sails | 89-Local Login
+
+
+    cd sapi
+    sails generate controller auth
