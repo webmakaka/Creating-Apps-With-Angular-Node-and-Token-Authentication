@@ -454,3 +454,18 @@ ___
     at pass (/usr/lib/node_modules/sails/node_modules/express/lib/router/index.js:145:5)
     at nextRoute (/usr/lib/node_modules/sails/node_modules/express/lib/router/index.js:100:7)
     at callbacks (/usr/lib/node_modules/sails/node_modules/express/lib/router/index.js:167:11) [Error: Signature verification failed]
+
+___
+
+Список глобальных пакетов:
+
+    $ npm list -g --depth=0
+        /usr/lib
+        ├── bower@1.3.12
+        ├── generator-angular@0.11.0
+        ├── generator-karma@0.9.0
+        ├── grunt-cli@0.1.13
+        ├── nodemon@1.3.6
+        ├── npm@1.4.28
+        ├── sails@0.10.5
+        └── yo@1.3.3
