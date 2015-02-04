@@ -415,8 +415,41 @@ What would you like Sails to do?
 2
 
 
-10\. Authentication With Sails | 89-Local Login
+10\. Authentication With Sails | 89-Local Login | не заработало
 
 
     cd sapi
     sails generate controller auth
+
+
+10\. Authentication With Sails | 90-Exercise | не заработало
+
+
+    cd sapi
+    npm install --save bcкypt-nodejs
+    npm install --save moment
+
+
+___
+
+При использовании sails, при попытке получить данные jobs ошибка:
+
+
+> error: Sending 500 ("Server Error") response:
+ Error: Signature verification failed
+    at Object.jwt_decode [as decode] (/rails_projects/demo/Creating-Apps-With-Angular-Node-and-Token-Authentication/sapi/node_modules/jwt-simple/lib/jwt.js:83:13)
+    at module.exports (/rails_projects/demo/Creating-Apps-With-Angular-Node-and-Token-Authentication/sapi/api/policies/jwtAuth.js:12:23)
+    at routeTargetFnWrapper (/usr/lib/node_modules/sails/lib/router/bind.js:178:5)
+    at callbacks (/usr/lib/node_modules/sails/node_modules/express/lib/router/index.js:164:37)
+    at param (/usr/lib/node_modules/sails/node_modules/express/lib/router/index.js:138:11)
+    at pass (/usr/lib/node_modules/sails/node_modules/express/lib/router/index.js:145:5)
+    at nextRoute (/usr/lib/node_modules/sails/node_modules/express/lib/router/index.js:100:7)
+    at callbacks (/usr/lib/node_modules/sails/node_modules/express/lib/router/index.js:167:11)
+    at /usr/lib/node_modules/sails/lib/router/bind.js:186:7
+    at _sendHeaders (/usr/lib/node_modules/sails/lib/hooks/cors/index.js:193:4)
+    at routeTargetFnWrapper (/usr/lib/node_modules/sails/lib/router/bind.js:178:5)
+    at callbacks (/usr/lib/node_modules/sails/node_modules/express/lib/router/index.js:164:37)
+    at param (/usr/lib/node_modules/sails/node_modules/express/lib/router/index.js:138:11)
+    at pass (/usr/lib/node_modules/sails/node_modules/express/lib/router/index.js:145:5)
+    at nextRoute (/usr/lib/node_modules/sails/node_modules/express/lib/router/index.js:100:7)
+    at callbacks (/usr/lib/node_modules/sails/node_modules/express/lib/router/index.js:167:11) [Error: Signature verification failed]

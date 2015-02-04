@@ -32,8 +32,8 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(fu
         controller: 'LogoutCtrl'
     });
 
-    $authProvider.loginUrl = API_URL + 'login';
-    $authProvider.signupUrl = API_URL + 'register';
+    $authProvider.loginUrl = API_URL + 'auth/login';
+    $authProvider.signupUrl = API_URL + 'auth/register';
 
     $authProvider.google({
         clientId: '710007462115-pn3o6o926mr9os2t8d16tq91u2q3vdml.apps.googleusercontent.com',
@@ -49,7 +49,7 @@ angular.module('creatingAppsWithAngularNodeAndTokenAuthenticationApp').config(fu
 
 })
 
-.constant('API_URL', 'http://localhost:3000/')
+.constant('API_URL', 'http://localhost:1337/')
 
 .run(function($window){
 
