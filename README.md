@@ -170,7 +170,7 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.ImgxIg==.WkzcmKyO2ZLVkHGnH2fzuv2eVuRqadfCYq
 
 05\. Register WebAPI JWT Library | 38-Design Break Optimize Alerts (ошибка в api.js. Вместо payload.sub нужно !payload.sub)
 
-05\. Register WebAPI JWT Library | 39-Switching to Node JWT Simple  (лучше не выполнять этот шаг)
+05\. Register WebAPI JWT Library | 39-Switching to Node JWT Simple  (Нужно смотреть реализацию в конце проекта. Здесь сделано неправильно)
 
     cd api/
     npm install --save jwt-simple  
