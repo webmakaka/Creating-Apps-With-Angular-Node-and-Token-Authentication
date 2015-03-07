@@ -27,7 +27,7 @@ module.exports = {
 
                   attributes.password = hash;
                   next();
-              })
-          })
+              });
+          });
   }
 };

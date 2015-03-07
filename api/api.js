@@ -17,7 +17,7 @@ app.use(passport.initialize());
 
 passport.serializeUser(function(user, done){
     done(null, user.id);
-})
+});
 
 app.use(function(req, res, next){
     res.header('Access-Control-Allow-Origin', 'http://localhost');
@@ -26,7 +26,7 @@ app.use(function(req, res, next){
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
     next();
-})
+});
 
 
 passport.use('local-register', LocalStrategy.register);
@@ -48,8 +48,8 @@ app.get('/jobs', jobs);
 app.post('/auth/google', googleAuth);
 app.post('/auth/facebook', facebookAuth);
 
-mongoose.connect('mongodb://marley:marley@ds053678.mongolab.com:53678/psjwt')
+mongoose.connect('mongodb://marley:marley@ds053678.mongolab.com:53678/psjwt');
 
 var server = app.listen(3000, function(){
     console.log('api listening on ', server.address().port);
-})
+});

@@ -37,8 +37,8 @@ module.exports = {
 				}
 
 				createSendToken(foundUser, res);
-			})
-		})
+			});
+		});
 	},
 
 	register: function(req, res){
@@ -60,6 +60,6 @@ module.exports = {
 			createSendToken(user, res);
 
 
-		})
+		});
 	}
 };
