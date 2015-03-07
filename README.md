@@ -405,7 +405,7 @@ http://localhost/#/jobs
 
 
 
-10\. Authentication With Sails | 88-Authenticating With Policy Middleware | не заработало
+10\. Authentication With Sails | 88-Authenticating With Policy Middleware
 
     cd sapi
     npm install --save jwt-simple
@@ -416,14 +416,14 @@ What would you like Sails to do?
 2
 
 
-10\. Authentication With Sails | 89-Local Login | не заработало
+10\. Authentication With Sails | 89-Local Login
 
 
     cd sapi
     sails generate controller auth
 
 
-10\. Authentication With Sails | 90-Exercise | не заработало
+10\. Authentication With Sails | 90-Exercise
 
 
     cd sapi
