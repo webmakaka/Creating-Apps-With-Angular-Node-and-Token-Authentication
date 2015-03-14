@@ -5,7 +5,7 @@ module.exports = function(user, res){
         var payload = {
             sub: user.id,
             exp: moment().add(10, 'days').unix()
-        }
+        };
 
         var token = jwt.encode(payload, "shhh..");
 
@@ -13,4 +13,4 @@ module.exports = function(user, res){
             user: user.toJSON(),
             token: token
         });
-}
+};

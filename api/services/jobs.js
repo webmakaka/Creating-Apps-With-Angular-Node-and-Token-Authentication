@@ -1,6 +1,5 @@
 var jwt = require('jwt-simple');
 
-
 module.exports = function(req,res){
 
     var token = req.headers.authorization.split(' ')[1];

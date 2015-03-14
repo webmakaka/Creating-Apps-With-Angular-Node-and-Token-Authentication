@@ -14,7 +14,7 @@ module.exports = function(req,res){
         code: req.body.code,
         grant_type: 'authorization_code',
         client_secret: config.GOOGLE_SECRET
-    }
+    };
 
     request.post(url, {
         json: true,
@@ -23,7 +23,7 @@ module.exports = function(req,res){
         var accessToken = token.access_token;
         var headers = {
             Authorization: 'Bearer ' + accessToken
-        }
+        };
 
         request.get({
             url: apiUrl,
@@ -42,8 +42,8 @@ module.exports = function(req,res){
                 newUser.save(function(err){
                     if (err) return next(err);
                     createSendToken(newUser, res);
-                })
+                });
             });
-        })
+        });
     });
 };

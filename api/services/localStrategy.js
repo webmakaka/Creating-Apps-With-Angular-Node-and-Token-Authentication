@@ -26,7 +26,7 @@ exports.login = new LocalStrategy(strategyOptions, function(email, password, don
             return done(null, user);
         });
 
-    })
+    });
 });
 
 exports.register = new LocalStrategy(strategyOptions, function(email, password, done){
@@ -47,7 +47,6 @@ exports.register = new LocalStrategy(strategyOptions, function(email, password, 
 
         newUser.save(function(err){
             done(null, newUser);
-        })
-
+        });
     });
 });

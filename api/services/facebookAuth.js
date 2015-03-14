@@ -37,8 +37,8 @@ module.exports = function(req, res){
                     newUser.displayName = profile.name;
                     newUser.save(function(err){
                         createSendToken(newUser, res);
-                    })
-                })
-        })
-    })
-}
+                    });
+                });
+        });
+    });
+};

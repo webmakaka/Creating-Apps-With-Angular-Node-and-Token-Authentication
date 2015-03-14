@@ -13,13 +13,13 @@ var model = {
     title: 'psJwt',
     subTitle: 'Thanks for signing up!',
     body: 'Please verify your email address by clicking the button below'
-}
+};
 
 
 exports.send =  function(email){
     var payload = {
         sub: email
-    }
+    };
 
     var token = jwt.encode(payload, config.EMAIL_SECRET);
 
@@ -48,8 +48,8 @@ exports.send =  function(email){
 
         console.log("OK");
         console.log('email sent ', info.response);
-    })
-}
+    });
+};
 
 exports.handler = function(req, res){
     var token = req.query.token;
@@ -73,10 +73,10 @@ exports.handler = function(req, res){
                 if(err) return res.status(500);
 
                 return res.redirect(config.APP_URL);
-            })
-    })
+            });
+    });
 
-}
+};
 
 function getHtml(token){
     var path = './views/emailVerification.html';

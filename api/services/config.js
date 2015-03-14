@@ -6,4 +6,4 @@ module.exports = {
     SMTP_SERVER: 'smtp.gmail.com',
     SMTP_USERNAME: 'your_mail@gmail.com',
     SMTP_PASSWORD: 'your_password'
-}
+};
