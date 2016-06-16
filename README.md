@@ -2,7 +2,7 @@
 
 ports:  
 
-    9000 - grunt (у меня на 80)
+    9000 - grunt (I use port 80)
     3000 - express
     1337 - sails
 
